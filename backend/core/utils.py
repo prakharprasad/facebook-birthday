@@ -7,7 +7,9 @@ from core.model import *
 
 async def generate_facebook_client():
      today = datetime.today()
-     access_token = os.environ.get("FACEBOOK_TOKEN")
+     access_token = AccessToken.get(id=1)
+     if access_token:
+         access_token = access_token.token
      return facebook.GraphAPI(access_token=access_token)
 
 async def generate_database():
