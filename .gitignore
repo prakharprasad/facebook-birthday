@@ -1,4 +1,5 @@
 db.sqlite
+storage.sqlite
 .vscode
 
 # Byte-compiled / optimized / DLL files
@@ -8,7 +9,6 @@ __pycache__/
 
 # C extensions
 *.so
-storage.sqlite
 # Distribution / packaging
 .Python
 build/
