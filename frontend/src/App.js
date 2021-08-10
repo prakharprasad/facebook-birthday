@@ -1,7 +1,7 @@
-import { Box, Button, Divider, Flex, FormControl, Input, Menu, MenuButton, MenuItem, MenuList, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Spacer, Spinner, useDisclosure, useToast, VStack } from "@chakra-ui/react";
+import { Box, Button, Divider, Flex, Input, Menu, MenuButton, MenuItem, MenuList, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Spinner, useDisclosure, useToast, VStack } from "@chakra-ui/react";
 import { fetchPUT, handleErrors, infoToast, successToast } from "components/Utils";
 import React, { useEffect, useState } from 'react';
-import { FaChevronDown, FaClock, FaCog, FaDatabase, FaEdit, FaRunning, FaSearch, FaSyncAlt, FaTrash, FaUserShield } from "react-icons/fa";
+import { FaChevronDown, FaCog, FaDatabase, FaEdit, FaRunning, FaSearch, FaSyncAlt, FaTrash, FaUserShield } from "react-icons/fa";
 import DarkModeToggle from "./components/DarkModeToggle";
 import FacebookUsersTable from "./components/FacebookUsersTable";
 
