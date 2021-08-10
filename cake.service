@@ -1,0 +1,14 @@
+[Unit]
+Description=Cake Web UI
+After=network.target
+[Service]
+User=www-data
+Group=www-data
+#WorkingDirectory=/home/prakhar/www/facebook-birthday/frontend
+WorkingDirectory=
+ExecStart=npm run staging
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+[Install]
+WantedBy=multi-user.target
