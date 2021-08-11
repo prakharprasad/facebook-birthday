@@ -1,4 +1,4 @@
-import { Avatar, Center, Select, Stack, Table, Tbody, Td, Th, Thead, Tr, Wrap, WrapItem } from '@chakra-ui/react';
+import { Avatar, Center, Link, Select, Stack, Table, Tbody, Td, Th, Thead, Tr, Wrap, WrapItem } from '@chakra-ui/react';
 import { fetchPUT, handleErrors, successToast } from 'components/Utils';
 import React from 'react';
 
@@ -30,7 +30,8 @@ const Trow = ({ children }) => {
                                 <Avatar name={user.name} src={`https://graph.facebook.com/v11.0/${user.uid}/picture?access_token=${facebookClientToken}`} mr={2} />
                             </WrapItem>
                             <WrapItem>
-                                {user.name}
+                                <Link href={`https://facebook.com/${user.uid}`} isExternal>{user.name}
+                                </Link>
                             </WrapItem>
                         </Center>
                     </Wrap>
