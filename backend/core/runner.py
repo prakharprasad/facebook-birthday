@@ -18,7 +18,7 @@ async def execute(date:datetime = datetime.today(), dry_run = True):
             try: 
                 if not dry_run:
                     client.put_object(parent_object=user.uid, connection_name="feed", message=message)
-                output.append(f"{user.name} ({message})")
+                output.append(f"{user.name}")
             except:
-                output.append(f"{user.name} (Failed)")
+                output.append(f"{user.name} [failed]")
         return output
