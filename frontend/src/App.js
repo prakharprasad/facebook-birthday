@@ -105,7 +105,7 @@ function App() {
     return (
       <Flex flexWrap="wrap" justifyContent="space-around">
         <Box borderWidth={5} borderRadius={10} boxShadow="dark-lg" m={8}>
-          <Flex flexWrap="wrap" flexDirection="row" justifyContent="space-between" minWidth="50vw">
+          <Flex flexWrap="wrap" flexDirection="row" justifyContent="space-between" minWidth="40vw">
             {/* Run Menu */}
             <Menu>
               <MenuButton as={Button} rightIcon={<FaChevronDown />} margin={defaultMargin} leftIcon={<FaRunning />}>
