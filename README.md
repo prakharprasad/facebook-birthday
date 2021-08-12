@@ -1,4 +1,7 @@
 # Cake for Facebook Birthday 
+
+![Deployment](https://github.com/prakharprasad/facebook-birthday/actions/workflows/deploy-web-ui.yml/badge.svg)
+
 Automagically wish your Facebook friends on their birthday.
 
 Requirements:
