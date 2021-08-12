@@ -1,4 +1,4 @@
-name: Deploy Web UI to server
+name: Deploy Web UI to Server
 on: 
   push:
    branches:
@@ -7,12 +7,12 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Deploying Changes
+    - name: Deploying Changes via SSH
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USERNAME }}
-        port: 23
+        port: 22
         script: |
           cd ${{secrets.DEPLOY_PATH}}
           git pull
