@@ -19,7 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "staging-backend": "export APP_ENV=development && cd ../backend && .venv/bin/python3 app.py",
-    "production-backend": "export APP_ENV=production && cd ../backend && .venv/bin/python3 app.py",
+    "production": "export APP_ENV=production && cd ../backend && .venv/bin/python3 app.py",
     "staging": "concurrently \"npm run staging-backend\"  \"npm run start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
