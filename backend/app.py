@@ -95,6 +95,6 @@ async def update_blacklist(payload: BlacklistPayload):
         
 if __name__ == "__main__":
     if os.environ.get("APP_ENV") == "production":
-        uvicorn.run("app:app", host="0.0.0.0", port=5000)
+        uvicorn.run("app:app", host="127.0.0.1", port=5000)
     elif os.environ.get("APP_ENV") == "development":
-        uvicorn.run("app:app", host="0.0.0.0", port=5000, reload=True, debug=True)
+        uvicorn.run("app:app", host="127.0.0.1", port=5000, reload=True, debug=True)
