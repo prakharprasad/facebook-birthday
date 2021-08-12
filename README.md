@@ -8,7 +8,7 @@ Requirements:
 
 ## Installation
 
-### Web UI
+### A. Web UI
 
 1. Run the commands below to setup the environment:
     ```
@@ -36,14 +36,14 @@ Requirements:
     ```
 
 
-### Cron Job 
+### B. Cron Job 
 
 This will execute everyday at 12:00am system time.
 ```
 0 0 * * * /path/to/backend.venv/bin/python3 /path/to/backend/cron.py --dry-run=false
 ```
 
-### Run
+## Run
 
 **Staging** 
 
@@ -56,7 +56,7 @@ This will execute everyday at 12:00am system time.
 
 
 
-### Apache Site Configuration
+**Apache Site Configuration**
 ```
 <VirtualHost *:80>
     #ReactJS /build directory
