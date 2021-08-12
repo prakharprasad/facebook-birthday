@@ -1,4 +1,4 @@
-# Cake for Facebook Birthday 
+# 🍰 Cake for Facebook Birthday 
 
 ![Made with love in India](https://madewithlove.now.sh/in?heart=true&colorA=%23ff7e05&colorB=%2318af59)
 ![Deployment](https://github.com/prakharprasad/facebook-birthday/actions/workflows/deploy-web-ui.yml/badge.svg)
