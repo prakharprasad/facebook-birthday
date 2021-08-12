@@ -25,10 +25,10 @@ Automagically wish your Facebook friends on their birthday.
 **Web UI systemd service**
 1. Modify the `WorkingDirectory` in `cake.service`
 2. Execute the following commands:
-```
-sudo  cp cake.service /etc/systemd/system/
-sudo systemctl daemon-reload
- ```
+    ```
+    sudo  cp cake.service /etc/systemd/system/
+    sudo systemctl daemon-reload
+    ```
 
 
 ### Cron Job 
