@@ -1,6 +1,11 @@
 # Cake for Facebook Birthday 
 Automagically wish your Facebook friends on their birthday.
 
+Requirements:
+1. Python 3.x
+2. Apache httpd Server
+3. Node.js NPM
+
 ## Installation
 
 ### Web UI
