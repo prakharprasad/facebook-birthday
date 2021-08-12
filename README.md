@@ -26,7 +26,7 @@ Automagically wish your Facebook friends on their birthday.
 1. Modify the `WorkingDirectory` in `cake.service`
 2. Execute the following commands:
     ```
-    sudo  cp cake.service /etc/systemd/system/
+    sudo cp cake.service /etc/systemd/system/
     sudo systemctl daemon-reload
     ```
 
