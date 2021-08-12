@@ -6,6 +6,8 @@ on:
 jobs:
   build-web-ui:
     runs-on: ubuntu-latest
+    env: 
+      CI: false
     steps:
       - name: Building React.js Web UI
         uses: actions/checkout@v2
