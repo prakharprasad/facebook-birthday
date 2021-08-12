@@ -44,7 +44,7 @@ Requirements:
 
 This will execute everyday at 12:00am system time.
 ```
-0 0 * * * /path/to/backend.venv/bin/python3 /path/to/backend/cron.py --dry-run=false
+0 0 * * * /path/to/backend/.venv/bin/python3 /path/to/backend/cron.py --dry-run=false
 ```
 
 ## Run
