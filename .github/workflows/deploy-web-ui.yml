@@ -1,13 +1,20 @@
-name: Deploy Web UI to Server
+name: "Web UI: Build & Deploy"
 on: 
   push:
    branches:
      - main
 jobs:
-  deploy:
+  build-web-ui:
     runs-on: ubuntu-latest
     steps:
-    - name: Deploying Changes via SSH
+      - name: Building React.js Web UI
+        uses: actions/checkout@v2
+        run: cd frontend && npm run build
+  deploy-web-ui:
+    runs-on: ubuntu-latest
+    needs: build-web-ui
+    steps:
+    - name: Deploying Web UI Changes via SSH
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.SSH_HOST }}
