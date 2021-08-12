@@ -18,7 +18,7 @@ jobs:
           git pull
           cd frontend
           npm run build
-          echo ${{secrets.SUDO_PASSWORD}} | sudo -s service cake restart
+          echo ${{secrets.SUDO_PASSWORD}} | sudo -S service cake restart
         key: ${{ secrets.FZ_SSH_PRIVATE_KEY }} 
 
   
