@@ -7,6 +7,7 @@ from core.utils import *
 
 messages = ["Happy Birthday! 🍰🎉", "Wishing you a very happy birthday! 🍰🎉"]
 
+
 async def execute(date: datetime = datetime.today(), dry_run=True):
     client = await generate_facebook_client()
     date = datetime.strptime(f"{date.month}/{date.day}", "%m/%d")
