@@ -1,4 +1,4 @@
-name: build & deploy
+name: deploy
 on: 
   push:
    branches:
@@ -6,13 +6,11 @@ on:
 jobs:
   build-web-ui:
     runs-on: ubuntu-latest
-    env: 
-      CI: false
     steps:
       - name: Building React.js Web UI
         uses: actions/checkout@v2
       - run: cd frontend && npm install && npm run build
-  deploy-web-ui:
+  deploying:
     runs-on: ubuntu-latest
     needs: build-web-ui
     steps:
