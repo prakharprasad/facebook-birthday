@@ -98,7 +98,7 @@ function App() {
   }
   useEffect(() => {
     getFacebookUsers();
-  }, [])
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
 
   if (isLoaded === true) {
