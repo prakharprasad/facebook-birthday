@@ -1,5 +1,4 @@
 import asyncio
-from types import coroutine
 import click
 import core.runner as runner
 from datetime import datetime
