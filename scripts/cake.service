@@ -1,11 +1,12 @@
+#Modify as per your environment
+
 [Unit]
 Description=Cake Web UI
 After=network.target
 [Service]
 User=www-data
 Group=www-data
-#WorkingDirectory=/var/www/html/frontend
-WorkingDirectory=
+WorkingDirectory=/var/www/html/frontend
 ExecStart=npm run production
 Restart=always
 StandardOutput=syslog

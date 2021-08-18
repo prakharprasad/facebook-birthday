@@ -17,18 +17,17 @@ Requirements:
 1. Run the commands below to setup the environment:
     ```
     git clone https://github.com/prakharprasad/facebook-birthday.git
-    cd backend && mkdir db
-    python -m venv .venv && source .venv/bin/activate
-    pip3 install -r requirments.txt
+    cd backend && pip3 install -r requirments.txt
     cd ../frontend
+    npm install
     npm run build 
-    sudo chown -R www-data:www-data ../
+    sudo chown -R $WEB_SERVER_USER ../
     ```
-1. Use the Apache configuration below and modify the `DocumentRoot` and `Directory` as per your Web UI setup directory. Once completed save the file to `/etc/apache2/sites-available/cake.conf`
-2. Run the commands below to activate the site:
+2. Use the Apache configuration in `/scripts` and modify the `DocumentRoot` and `Directory` as per your Web UI setup directory. Once completed save the file to `/etc/apache2/sites-available/apache-cake.conf`
+3. Run the commands below to activate the site:
     ```
     sudo apache2ctl configtest
-    sudo a2ensite cake.conf
+    sudo a2ensite apache-cake.conf
     sudo service apache2 reload
     ```
 **Web UI systemd service**
@@ -44,34 +43,20 @@ Requirements:
 
 This will execute everyday at 12:00am system time.
 ```
-0 0 * * * /path/to/backend/.venv/bin/python3 /path/to/backend/cron.py --dry-run=false
+0 0 * * * python3 /path/to/app/backend/cron.py --dry-run=false
 ```
 
 ## Run
 
 **Staging** 
 
-1. Install `npm install concurrently --save`
-2. Launch `npm run staging` from `/frontend` directory
+1. Launch `npm run staging` from `/frontend` directory
 
 **Production**
 
+1. Launch `npm run production` from `/frontend` directory
+
+OR
+
 `sudo systemctl start cake`
 
-
-
-**Apache Site Configuration**
-```
-<VirtualHost *:80>
-    #ReactJS /build directory
-    DocumentRoot "/var/www/html/frontend/build"
-    #Route API requests, change port if required
-    ProxyPass /api/ http://127.0.0.1:5000/api/
-    ProxyPassReverse /api/ http://127.0.0.1:5000/api/
-    ServerName example.com
-
-<Directory /var/www/html/frontend/build>
-    AllowOverride all
-    Require all granted
-</Directory>
-</VirtualHost>
