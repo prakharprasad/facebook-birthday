@@ -27,7 +27,7 @@ const Trow = ({ children }) => {
                     <Td><Wrap>
                         <Center>
                             <WrapItem>
-                                <Avatar name={user.name} src={`https://graph.facebook.com/v11.0/${user.uid}/picture?access_token=${facebookClientToken}`} mr={2} />
+                                <Avatar name={user.name} src={`https://graph.facebook.com/v11.0/${user.uid}/picture?access_token=${facebookClientToken}`} loading="eager" mr={2} />
                             </WrapItem>
                             <WrapItem>
                                 <Link href={`https://facebook.com/${user.uid}`} isExternal>{user.name}
