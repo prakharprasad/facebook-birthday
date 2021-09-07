@@ -1,5 +1,5 @@
 import { Box, Button, Divider, Flex, Input, Menu, MenuButton, MenuItem, MenuList, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Spinner, useDisclosure, useToast, VStack } from "@chakra-ui/react";
-import { fetchPUT, handleErrors, infoToast, successToast } from "components/Utils";
+import { fetchPUT, handleErrors, infoToast, successToast } from "./components/Utils";
 import React, { useEffect, useState } from 'react';
 import { FaChevronDown, FaCog, FaDatabase, FaEdit, FaRunning, FaSearch, FaSyncAlt, FaTrash, FaUserShield } from "react-icons/fa";
 import DarkModeToggle from "./components/DarkModeToggle";

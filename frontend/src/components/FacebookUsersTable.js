@@ -1,5 +1,5 @@
 import { Avatar, Center, Link, Select, Stack, Table, Tbody, Td, Th, Thead, Tr, Wrap, WrapItem } from '@chakra-ui/react';
-import { fetchPUT, handleErrors, successToast } from 'components/Utils';
+import { fetchPUT, handleErrors, successToast } from '../components/Utils';
 import React from 'react';
 
 //This is a client-side token and safe to share with others
