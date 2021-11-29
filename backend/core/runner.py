@@ -5,7 +5,8 @@ from datetime import datetime
 from core.model import *
 from core.utils import *
 
-messages = ["Happy Birthday! 🍰🎉", "Wishing you a very happy birthday! 🍰🎉"]
+# Add more messages here
+messages = ["Happy Birthday! 🍰🎉"]
 
 
 async def execute(date: datetime = datetime.today(), dry_run=True):
