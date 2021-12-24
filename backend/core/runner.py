@@ -4,9 +4,9 @@ import random
 from datetime import datetime
 from core.model import *
 from core.utils import *
+from core.message import *
 
 # Add more messages here
-messages = ["Happy Birthday! 🍰🎉"]
 
 
 async def execute(date: datetime = datetime.today(), dry_run=True):
@@ -17,7 +17,7 @@ async def execute(date: datetime = datetime.today(), dry_run=True):
         users = FacebookUser.select(
             lambda user: user.is_blacklisted is False and user.birthday == date)
         for user in users:
-            message = messages[random.randint(0, len(messages) - 1)]
+            message = await generate_birthday_message()
             try:
                 if not dry_run:
                     client.put_object(parent_object=user.uid,
