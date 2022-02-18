@@ -1,6 +1,6 @@
 asgiref==3.4.1
 click==8.0.3
 facebook-sdk==3.1.0
-fastapi==0.68.1
+fastapi==0.74.0
 pony==0.7.14
 uvicorn==0.15.0
