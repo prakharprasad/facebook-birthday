@@ -22,7 +22,9 @@ jobs:
         username: ${{ secrets.SSH_USERNAME }}
         port: 22
         script: |
-          cd ${{secrets.DEPLOY_PATH}}
+          source ~/.bashrc
+          mkdir -p ${{secrets.LOCAL_REPO_PATH}}
+          cd ${{secrets.LOCAL_REPO_PATH}}
           git pull
           cd frontend
           npm run build
