@@ -17,7 +17,7 @@ Requirements:
 1. Run the commands below to setup the environment:
     ```
     git clone https://github.com/prakharprasad/facebook-birthday.git && cd facebook-birthday
-    cd backend && pip3 install -r requirments.txt
+    cd backend && pip3 install -r requirements.txt
     cd ../frontend
     npm install
     npm run build 
